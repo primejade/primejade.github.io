@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>primejade</title>
+    <title>workflow on primejade</title>
     
     
     
-    <link>https://primejade.github.io/</link>
-    <description>Recent content on primejade</description>
+    <link>https://primejade.github.io/tags/workflow/</link>
+    <description>Recent content in workflow on primejade</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>primejade</copyright>
     <lastBuildDate>Sat, 19 Feb 2022 22:45:12 +0330</lastBuildDate>
     
-	<atom:link href="https://primejade.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://primejade.github.io/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,26 +30,6 @@
         
         
           Vim The Text Editor #  C #  Python #  Shell #  
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Post number one</title>
-      <link>https://primejade.github.io/posts/mypost/</link>
-      <pubDate>Sat, 19 Feb 2022 20:05:43 +0330</pubDate>
-      
-      <guid>https://primejade.github.io/posts/mypost/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Create a beautifully simple personal or academic website in under 10 minutes.
           
         
         </description>
