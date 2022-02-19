@@ -9,14 +9,14 @@
     <description>Recent content on Hello Friend</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <copyright>primejade</copyright>
     <lastBuildDate>Sat, 19 Feb 2022 20:05:43 +0330</lastBuildDate>
     
 	<atom:link href="https://primejade.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>This is the post Title</title>
+      <title>Post number one</title>
       <link>https://primejade.github.io/posts/mypost/</link>
       <pubDate>Sat, 19 Feb 2022 20:05:43 +0330</pubDate>
       
@@ -29,10 +29,7 @@
         
         
         
-          The first section #  This is just a simple test from hugo static site generator.
-#include &amp;lt;stdio.h&amp;gt; /* * I really perfer BSD code-style */ int main (void) { printf(&amp;#34;Hello World!\n&amp;#34;); return 0; } I heard multi-lingual #  نمونه #  نمونه شماره یک، در حال تست کردن متن فارسی هستیم.
-و فکر کنم تمام شد :))
-Result #  Let&amp;rsquo;s see what we got!
+          Create a beautifully simple personal or academic website in under 10 minutes.
           
         
         </description>
