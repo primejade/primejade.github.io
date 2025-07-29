@@ -164,25 +164,25 @@ you need to change your current <strong>working directory</strong> (e.g
 <div class="listingblock">
 <div class="title">Clone bare repo</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git clone --bare git@github.com:hossein-lap/blog.git blog.git</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone --bare git@github.com:hossein-lap/blog.git blog.git</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Create worktree</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git worktree add &lt;branch-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git worktree add &lt;branch-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">With new branch</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git worktree add -b &lt;new-branch-name&gt; &lt;new-directory-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git worktree add -b &lt;new-branch-name&gt; &lt;new-directory-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Remove worktree</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git worktree remove &lt;branch-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git worktree remove &lt;branch-name&gt;</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -222,7 +222,7 @@ on a different branch. Be careful with that.</p>
 <div class="listingblock">
 <div class="title">Let&#8217;s automate this process:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">#!/usr/bin/env bash
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/usr/bin/env bash
 set -e
 
 # help function

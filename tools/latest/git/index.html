@@ -164,7 +164,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git init</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git init</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -172,7 +172,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git init --initial-branch=trunk</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git init --initial-branch=trunk</code></pre>
 </div>
 </div>
 </div>
@@ -186,7 +186,7 @@
 <div class="listingblock">
 <div class="title">Some popular options are:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">user.name = Your name        # critical
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">user.name = Your name        # critical
 user.email = your@email.com  # critical
 core.editor = vim      # default git's text editor
 core.autocrlf = input  # for fixing EOL character across multiple OSs
@@ -200,7 +200,7 @@ color.pager = true           # colored output e.g `git log --oneline`</code></pr
 <div class="listingblock">
 <div class="title">If you&#8217;re wondering How to apply these settings on the command line:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git config --global user.name "Your Name"
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git config --global user.name "Your Name"
 git config --global user.email you@email.com
 git config --global merge.ff true</code></pre>
 </div>
@@ -215,7 +215,7 @@ git config --global merge.ff true</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git add .
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add .
 git add &lt;path/to/file&gt;</code></pre>
 </div>
 </div>
@@ -232,7 +232,7 @@ you need to pass <code>--cached</code> argument to the git <em>subcommand</em>.<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git rm --cached &lt;file-name&gt;
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git rm --cached &lt;file-name&gt;
 git diff --cached .</code></pre>
 </div>
 </div>
@@ -250,7 +250,7 @@ git diff --cached .</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git status</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git status</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -273,7 +273,7 @@ no changes added to commit (use "git add" and/or "git commit -a")</pre>
 <div class="listingblock">
 <div class="title">Short version:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git status -s</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git status -s</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -314,7 +314,7 @@ no changes added to commit (use "git add" and/or "git commit -a")</pre>
 <div class="listingblock">
 <div class="title">If you want to see the status from the current working directory:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git status -s .</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git status -s .</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -335,7 +335,7 @@ no changes added to commit (use "git add" and/or "git commit -a")</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git commit</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git commit</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -345,13 +345,13 @@ at the command line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git commit -m 'my very obvious commit message'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git commit -m 'my very obvious commit message'</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Some extra flags for commit:</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">--no-gpg-sign  # don't sign the commit, just for this one
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">--no-gpg-sign  # don't sign the commit, just for this one
 --amend        # apply changes to the last commit, no new commit
                # Warning: be careful with this, it can mess things up
 --no-edit      # used with `--amend`, don't change commit message</code></pre>
@@ -366,14 +366,14 @@ at the command line:</p>
 <div class="listingblock">
 <div class="title">Global</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git config --global user.name 'You Name'
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git config --global user.name 'You Name'
 git config --global user.email 'you@email.com'</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Per Repository, inside the local repository</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git config user.name 'You Name'
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git config user.name 'You Name'
 git config user.email 'you@email.com'</code></pre>
 </div>
 </div>
@@ -405,7 +405,7 @@ HEAD position, etc.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git log</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git log</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -432,7 +432,7 @@ Date:   Wed Oct 9 20:13:41 2024 +0330
 <div class="listingblock">
 <div class="title">Some extra flags</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">--oneline  # show short commit hash and only the commit message
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">--oneline  # show short commit hash and only the commit message
 --all      # show all branches
 --graph    # draw the graph for branches
 --stat     # show changed files
@@ -441,7 +441,7 @@ Date:   Wed Oct 9 20:13:41 2024 +0330
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git log --all --oneline --graph</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git log --all --oneline --graph</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -490,7 +490,7 @@ called <strong>origin</strong> but remember, it&#8217;s just a name which points
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git remote</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git remote</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -501,7 +501,7 @@ called <strong>origin</strong> but remember, it&#8217;s just a name which points
 <div class="listingblock">
 <div class="title">Verbose output</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git remote -v</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git remote -v</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -513,7 +513,7 @@ origin	git@github.com:hossein-lap/blog.posts.git (push)</pre>
 <div class="listingblock">
 <div class="title">Working with remotes</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git remote add &lt;name&gt; &lt;url&gt;  # add new remote URL
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git remote add &lt;name&gt; &lt;url&gt;  # add new remote URL
 git remote remove &lt;name&gt;     # remove existing remote URL</code></pre>
 </div>
 </div>
@@ -556,7 +556,7 @@ authentication.</p>
 <div class="listingblock">
 <div class="title">Generate ssh key</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">ssh-keygen</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ssh-keygen</code></pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -600,7 +600,7 @@ without the commit histories.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git clone &lt;url&gt;
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone &lt;url&gt;
 git clone https://github.com/hossein-lap/blog.posts
 git clone git@github.com:hossein-lap/blog.posts.git</code></pre>
 </div>
@@ -608,7 +608,7 @@ git clone git@github.com:hossein-lap/blog.posts.git</code></pre>
 <div class="listingblock">
 <div class="title">Some extra flags</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">--depth &lt;number&gt;   # depths of previous commit history
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">--depth &lt;number&gt;   # depths of previous commit history
 --branch &lt;name&gt;    # move HEAD to the &lt;name&gt; branch after clone
 --origin &lt;name&gt;    # use &lt;name&gt; instead of default `origin` for remote
 --bare             # clone the bare repo (useful but very advanced)
@@ -626,7 +626,7 @@ anything in the current working area. Just synchronizing.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git fetch --all        # fetch all changes from all branches
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git fetch --all        # fetch all changes from all branches
 git fetch --unshallow  # fetch all the missing contents from remote</code></pre>
 </div>
 </div>
@@ -640,12 +640,12 @@ git fetch --unshallow  # fetch all the missing contents from remote</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git push &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git push origin master</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git push origin master</code></pre>
 </div>
 </div>
 <div class="admonitionblock caution">
@@ -662,7 +662,7 @@ git fetch --unshallow  # fetch all the missing contents from remote</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git commit --amend --no-edit
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git commit --amend --no-edit
 git push origin feature/new-module --force</code></pre>
 </div>
 </div>
@@ -685,7 +685,7 @@ You must remove it from <strong>protected branches</strong> first.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git pull origin master</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git pull origin master</code></pre>
 </div>
 </div>
 <div class="admonitionblock caution">
@@ -715,7 +715,7 @@ Branches are created from one point in the history which is you current branch</
 <div class="listingblock">
 <div class="title">Your current branch</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git branch</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git branch</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -726,7 +726,7 @@ Branches are created from one point in the history which is you current branch</
 <div class="listingblock">
 <div class="title">Create new branch</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git switch -C &lt;new-branch-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git switch -C &lt;new-branch-name&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -740,13 +740,13 @@ the <code>checkout</code> command does a lot more than creating/switching branch
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git checkout -b &lt;new-branch-name&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -b &lt;new-branch-name&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Switch back to previous branch</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git checkout -
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git checkout -
 git switch -</code></pre>
 </div>
 </div>
@@ -774,7 +774,7 @@ area) after you&#8217;ve did you explorations.</p>
 <div class="listingblock">
 <div class="title">Move changes to stash from working area</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git log --oneline --all --graph</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git log --oneline --all --graph</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -788,7 +788,7 @@ area) after you&#8217;ve did you explorations.</p>
 <div class="listingblock">
 <div class="title">Stashing changes</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git stash push</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git stash push</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -801,7 +801,7 @@ area) after you&#8217;ve did you explorations.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git log --oneline --all --graph</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git log --oneline --all --graph</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -834,7 +834,7 @@ area) after you&#8217;ve did you explorations.</p>
 <div class="listingblock">
 <div class="title">Move back changes to working area from stash</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git stash pop</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git stash pop</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -861,7 +861,7 @@ Dropped refs/stash@{0} (a5eec65b3011ad09cd73c9845646ea1b87659f9e)</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git log --oneline --all --graph</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git log --oneline --all --graph</code></pre>
 </div>
 </div>
 <div class="literalblock">
@@ -972,7 +972,7 @@ man git-rebase</pre>
 <td class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git restore --source=HEAD .</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git restore --source=HEAD .</code></pre>
 </div>
 </div>
 </td>
@@ -1005,7 +1005,7 @@ your commit history</strong>. Especially with the <code>--hard</code> flag.</p>
 <td class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git reset --hard HEAD~1
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git reset --hard HEAD~1
 git reset --hard 6e057f8 # reset everything to a certain point
                          # using commit hash</code></pre>
 </div>
@@ -1027,14 +1027,14 @@ files somewhere else.</p>
 <div class="listingblock">
 <div class="title">Get diff file</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git diff HEAD~1 HEAD &gt; &lt;file-name&gt;
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git diff HEAD~1 HEAD &gt; &lt;file-name&gt;
 git diff HEAD~1 HEAD &gt; test-changes.diff</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Apply the diff</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">patch -p1 &lt; &lt;file-name&gt;
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">patch -p1 &lt; &lt;file-name&gt;
 patch -p1 &lt; test-changes.diff</code></pre>
 </div>
 </div>
@@ -1102,12 +1102,12 @@ file).</p>
 <div class="listingblock">
 <div class="title">A diff file</div>
 <div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">git diff Makefile default-theme.yml</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git diff Makefile default-theme.yml</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-diff" data-lang="diff">diff --git a/Makefile b/Makefile
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">diff --git a/Makefile b/Makefile
 index 16ab52b..db20550 100644
 --- a/Makefile
 +++ b/Makefile

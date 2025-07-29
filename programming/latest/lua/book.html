@@ -48,7 +48,91 @@
     <a class="nav-link" href="../perl/index.html">Perl Language</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../perl/syntax.html">Basic Syntax</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../perl/syntax-00-introduction.html">Syntax</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-01-variables.html">Syntax :: Variables</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-02-numbers.html">Syntax :: Numbers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-03-string.html">Syntax :: String</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-04-operator.html">Syntax :: Operator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-05-list.html">Syntax :: list</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-06-array.html">Syntax :: array</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-07-hash.html">Syntax :: hash</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-08-if.html">Syntax :: if</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-09-unless.html">Syntax :: unless</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-10-given.html">Syntax :: given</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-11-for.html">Syntax :: for</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-12-while.html">Syntax :: while</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-13-do-while.html">Syntax :: do-while</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-14-until.html">Syntax :: until</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-15-next.html">Syntax :: next</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-16-last.html">Syntax :: last</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-17-reference.html">Syntax :: Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-18-subroutine.html">Syntax :: Subroutine</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-19-module.html">Syntax :: Module</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-20-oop.html">Syntax :: OOP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-21-dbi.html">Syntax :: DBI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-22-sort.html">Syntax :: sort</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-23-open-file.html">Syntax :: Open File</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-24-read-file.html">Syntax :: Read File</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-25-write-file.html">Syntax :: Write to File</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../perl/syntax-26-file-test-ops.html">Syntax :: File Test Operations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../perl/example-00-simple-program.html">Example</a>
   </li>
 </ul>
   </li>
@@ -203,7 +287,7 @@ language or system is operating correctly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">print("Hello World!")</code></pre>
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">print("Hello World!")</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -236,7 +320,7 @@ that sets the value of variable to that expression.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">-- Different types
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">-- Different types
 local x = 10 -- number
 local name = "Neo" -- string
 local is_alive = false -- boolean
@@ -277,7 +361,7 @@ and prints its factorial:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">-- defines a factorial function
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">-- defines a factorial function
 function fact (n)
     if n == 0 then
         return 1
@@ -358,7 +442,7 @@ the expressions inside calls to <code>print</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">print(math.pi / 4)  --&gt; 0.78539816339745
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">print(math.pi / 4)  --&gt; 0.78539816339745
 a = 15
 print(a ^ 2)        --&gt; 225
 print(a + 2)        --&gt; 17</code></pre>
@@ -391,7 +475,7 @@ a file. For instance, suppose we have a file <code>lib1.lua</code> with the foll
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">function norm (x, y)
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">function norm (x, y)
     return math.sqrt(x^2 + y^2)
 end
 
@@ -456,7 +540,7 @@ Usually, I reserve the identifier <code>_</code> (a single underscore) for dummy
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">and end if or until break false in repeat while do for local
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">and end if or until break false in repeat while do for local
 return else function nil then elseif goto not true</code></pre>
 </div>
 </div>
@@ -486,7 +570,7 @@ or at the end of another line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">print("This is normal code.")
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">print("This is normal code.")
 -- This is a comment
 print("This is still normal code.") -- Comment at the end of a line of code.</code></pre>
 </div>
@@ -497,7 +581,7 @@ which start with a long bracket and can continue on many lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">print("This is normal code")
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">print("This is normal code")
 --[[Line 1
 Line 2
 ]]</code></pre>
@@ -516,7 +600,7 @@ It is often useful to do this when using comments to disable blocks of code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">--[==[
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">--[==[
 This is a comment that contains a closing long bracket of level 0 which is here:
  ]]
 However, the closing double bracket doesn't make the comment end, because the
@@ -550,7 +634,7 @@ would be erroneous:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">3 + 5</code></pre>
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">3 + 5</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -573,7 +657,7 @@ four chunks are all valid and equivalent:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">a = 1
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">a = 1
 b = a * 2
 
 a = 1;
@@ -811,7 +895,7 @@ not try to evaluate <code>a / i</code> when <code>i</code> is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">if not x then x = v end</code></pre>
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">if not x then x = v end</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -884,7 +968,7 @@ and the <code>or</code> operator returns true if either of arguments is true and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">local is_alive = true
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">local is_alive = true
 print(is_alive) -- true
 
 local is_alive = false
@@ -929,7 +1013,7 @@ even in hexadecimal. Here are some valid numbers:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">-- The Lua
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">-- The Lua
 local a = 1
 local b = 2
 local c = a + b
@@ -1067,7 +1151,7 @@ is also the only way to insert single or double quotes in certain cases.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">local phrase = [[My name is ]]
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">local phrase = [[My name is ]]
 local name = 'P J'
 print(phrase .. name) -- My name is P J
 
@@ -1202,7 +1286,7 @@ interpretation of characters.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-lua" data-lang="lua">print(#("This is a string")) --&gt; 16</code></pre>
+<pre class="highlightjs highlight"><code class="language-lua hljs" data-lang="lua">print(#("This is a string")) --&gt; 16</code></pre>
 </div>
 </div>
 <div class="sect3">

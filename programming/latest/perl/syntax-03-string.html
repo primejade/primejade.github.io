@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Perl Programming Language | Hos Docs</title>
+    <title>Perl String | Hos Docs</title>
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
     <meta name="generator" content="Antora 3.1.10">
-    <link rel="canonical" href="https://primejade.github.io/programming/latest/perl/index.html">
-    <meta property="og:url" content="https://primejade.github.io/programming/latest/perl/index.html">
+    <link rel="canonical" href="https://primejade.github.io/programming/latest/perl/syntax-03-string.html">
+    <meta property="og:url" content="https://primejade.github.io/programming/latest/perl/syntax-03-string.html">
     <meta property="og:description" content="A documentation page for Programming.">
     <meta property="og:site_name" content="Asciidoctor Docs">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:title" content="Programming - Perl Programming Language">
+    <meta property="og:title" content="Programming - Perl String">
     <meta property="og:image" content="https://primejade.github.io/_/img/asciidoctor-og.png">
     <meta name="twitter:site" content="@asciidoctor">
-    <meta name="page-spec" content="programming:perl:index.adoc">
+    <meta name="page-spec" content="programming:perl:syntax-03-string.adoc">
     <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
@@ -43,7 +43,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-url" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Perl Language</a>
 <ul class="nav-list">
@@ -57,7 +57,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="syntax-02-numbers.html">Syntax :: Numbers</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-url" data-depth="3">
     <a class="nav-link" href="syntax-03-string.html">Syntax :: String</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -223,14 +223,287 @@
   <ul>
     <li><a href="../index.html">Programming</a></li>
     <li><a href="index.html">Perl Language</a></li>
+    <li><a href="syntax-00-introduction.html">Syntax</a></li>
+    <li><a href="syntax-03-string.html">Syntax :: String</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/primejade/test-blog/edit/programming/docs/modules/perl/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/primejade/test-blog/edit/programming/docs/modules/perl/pages/syntax-03-string.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
 <article class="doc programming">
-<h1 class="page">Perl Programming Language</h1>
+<h1 class="page">Perl String</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl&#8217;s built-in string functions to manipulate strings.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_introduction_to_perl_strings"><a class="anchor" href="#_introduction_to_perl_strings"></a>1. Introduction to Perl strings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Perl, a string is a sequence of characters surrounded by some kind of
+quotation marks. A string can contain ASCII, UNICODE, and escape sequences
+characters such as <code>\n</code>.</p>
+</div>
+<div class="paragraph">
+<p>A Perl string has a length that depends on the amount of memory in your system,
+which is theoretically unlimited.</p>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates single and double-quoted strings.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my $s1 = "string with doubled-quotes";
+my $s2 = 'string with single quote';</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is important to remember that the double-quoted string replaces variables
+inside it by their values, while the single-quoted string treats them as text.
+This is known as variable interpolation in Perl.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_string_alternative_delimiters"><a class="anchor" href="#_perl_string_alternative_delimiters"></a>2. Perl string alternative delimiters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Besides the single and double quotes, Perl also allows you to use quote-like
+operators such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>q//</code> acts like a single-quoted string.</p>
+</li>
+<li>
+<p>The <code>qq//</code> acts like double-quoted string</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can choose any non-alphabetic and non-numeric characters as the delimiters,
+not only just characters <code>//</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
 
+my $s= q/"Are you learning Perl String today?" We asked./;
+print($s ,"\n");
+
+my $name = 'Jack';
+my $s2 = qq/"Are you learning Perl String today?"$name asked./;
+print($s2 ,"\n");</code></pre>
+</div>
+</div>
+<div class="ulist">
+<div class="title">How it works</div>
+<ul>
+<li>
+<p>First, defined a single-quoted string variable with the quote-like operator
+<code>q/</code>. The string  <code>$s</code> ends with <code>/</code></p>
+</li>
+<li>
+<p>Second, defined a double-quoted string with the quote-like operator <code>qq/</code>. In
+this case, we used the <code>$name</code> variable inside a string and it is replaced by
+its value, <code>Jack</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates string with the <code>^</code> delimiter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my $s = q^A string with different delimiter ^;
+print($s,"\n");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_string_functions"><a class="anchor" href="#_perl_string_functions"></a>3. Perl string functions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl provides a set of functions that allow you to manipulate strings
+effectively. We cover the most commonly used string functions in the following
+section for your reference.</p>
+</div>
+<div class="paragraph">
+<div class="title">Perl string length</div>
+<p>To find the number of characters in a string, you use the <code>length()</code> function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my $s = "This is a string\n";
+print(length($s),"\n"); #17</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Changing cases of string</div>
+<p>To change the cases of a string you use a pair of functions <code>lc()</code> and <code>uc()</code>
+that returns the lowercase and uppercase versions of a string.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my $s = "Change cases of a string\n";
+print("To upper case:\n");
+print(uc($s),"\n");
+
+print("To lower case:\n");
+print(lc($s),"\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Search for a substring inside a string</div>
+<p>To search for a substring inside a string, you use <code>index()</code> and <code>rindex()</code>
+functions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>index()</code> function searches for a substring inside a string from a
+specified position and returns the position of the first occurrence of the
+substring in the searched string. If the position is omitted, it searches
+from the beginning of the string.</p>
+</li>
+<li>
+<p>The <code>rindex()</code> function works like the <code>index()</code> function except it searches
+from the end of the string instead of from the beginning.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates how to use the <code>index()</code> and <code>rindex()</code>
+functions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my $s = "Learning Perl is easy\n";
+my $sub = "Perl";
+my $p = index($s,$sub); # rindex($s,$sub);
+print(qq\The substring "$sub" found at position "$p" in string "$s"\,"\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Get or modify substring inside a string</div>
+<p>To extract a substring out of a string, you use the <code>substr()</code> function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+# extract substring
+my $s = "Green is my favorite color";
+my $color  = substr($s, 0, 5);      # Green
+my $end    = substr($s, -5);        # color
+
+print($end,":",$color,"\n");
+
+# replace substring
+substr($s, 0, 5, "Red"); #Red is my favorite color
+print($s,"\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Other useful Perl string functions</div>
+<p>The following table illustrates other useful Perl string functions with their
+descriptions:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return ASCII or UNICODE character of a number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>crypt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encrypts passwords in one way fashion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a hexadecimal string to the corresponding value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>index</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Searches for a substring inside a string returns position where the first occurrence of the substring found</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns a lowercase version of the string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>length</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the number of characters of a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oct</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a string to an octal number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ord</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the numeric value of the first character of a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>q/string/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates single-quoted strings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>qq/string/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates double-quoted strings</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reverse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reverses a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rindex</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Searches for a substring from right to left</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sprintf</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formats string to be used with print()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>substr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets or modifies a substring in a string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the uppercase version of the string</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </article>
   </div>
 </main>

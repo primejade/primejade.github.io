@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Perl Programming Language | Hos Docs</title>
+    <title>Array | Hos Docs</title>
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
     <meta name="generator" content="Antora 3.1.10">
-    <link rel="canonical" href="https://primejade.github.io/programming/latest/perl/index.html">
-    <meta property="og:url" content="https://primejade.github.io/programming/latest/perl/index.html">
+    <link rel="canonical" href="https://primejade.github.io/programming/latest/perl/syntax-06-array.html">
+    <meta property="og:url" content="https://primejade.github.io/programming/latest/perl/syntax-06-array.html">
     <meta property="og:description" content="A documentation page for Programming.">
     <meta property="og:site_name" content="Asciidoctor Docs">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:title" content="Programming - Perl Programming Language">
+    <meta property="og:title" content="Programming - Array">
     <meta property="og:image" content="https://primejade.github.io/_/img/asciidoctor-og.png">
     <meta name="twitter:site" content="@asciidoctor">
-    <meta name="page-spec" content="programming:perl:index.adoc">
+    <meta name="page-spec" content="programming:perl:syntax-06-array.adoc">
     <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
   </head>
   <body class="article">
@@ -43,7 +43,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-url" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Perl Language</a>
 <ul class="nav-list">
@@ -66,7 +66,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="syntax-05-list.html">Syntax :: list</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-url" data-depth="3">
     <a class="nav-link" href="syntax-06-array.html">Syntax :: array</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -223,14 +223,323 @@
   <ul>
     <li><a href="../index.html">Programming</a></li>
     <li><a href="index.html">Perl Language</a></li>
+    <li><a href="syntax-00-introduction.html">Syntax</a></li>
+    <li><a href="syntax-06-array.html">Syntax :: array</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/primejade/test-blog/edit/programming/docs/modules/perl/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/primejade/test-blog/edit/programming/docs/modules/perl/pages/syntax-06-array.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
 <article class="doc programming">
-<h1 class="page">Perl Programming Language</h1>
+<h1 class="page">Array</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl array and how to use arrays effectively in your program and techniques to
+manipulate array’s elements.</p>
+</div>
+<div class="paragraph">
+<p>A
+<a href="syntax-05-list.html" class="xref page">list</a>
+is immutable so you cannot change it directly. In order to change a
+list, you need to store it in an array
+<a href="syntax-01-variables.html" class="xref page">variable</a>.</p>
+</div>
+<div class="paragraph">
+<p>By definition, an array is a variable that provides dynamic storage for a list.</p>
+</div>
+<div class="paragraph">
+<p>In Perl, the terms array and
+<a href="syntax-05-list.html" class="xref page">list</a>
+are used interchangeably, but you have to
+note an important difference: a list is immutable whereas an array is mutable.
+In other words, you can modify the array’s elements, grow or shrink the array,
+but not a list.</p>
+</div>
+<div class="paragraph">
+<p>A
+<a href="syntax-01-variables.html" class="xref page">scalar variable</a>
+begins with the dollar sign (<code>$</code>), however, an array variable begins with an
+at-sign (<code>@</code>).</p>
+</div>
+<div class="listingblock">
+<div class="title">How to declare an array variable</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
 
+my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+print("@days", "\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>$</code> sign looks like <code>S</code> in the word scalar. And <code>@</code> looks like <code>a</code> in the
+word array, which is a simple trick to remember what type of variables you are
+working with.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessing_perl_array_elements"><a class="anchor" href="#_accessing_perl_array_elements"></a>1. Accessing Perl array elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Like a list, you can access array elements using square brackets <code>[]</code> and indices.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+print($days[0]);
+
+print("\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you take a look at the code carefully, you will see that we used <code>$days[0]</code>
+instead of <code>@days[0]</code>.</p>
+</div>
+<div class="paragraph">
+<p>This is because an array element is a scalar, you have to use the scalar prefix
+(<code>$</code>). In Perl, the rule is that the prefix represents what you want to get,
+not what you’ve got.</p>
+</div>
+<div class="paragraph">
+<p>Perl also allows you to access array elements using negative indices. Perl
+returns an element referred to by a negative index from the end of the array.
+For example, <code>$days[-1]</code> returns the last element of the array <code>@days</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can access multiple array elements at a time using the same technique as
+the list slice.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+my @weekend = @days[-2..-1]; # SatSun
+
+print("@weekend");
+print("\n");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_counting_perl_array_elements"><a class="anchor" href="#_counting_perl_array_elements"></a>2. Counting Perl array elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you treat an array as a scalar, you will get the number of elements in the
+array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my $count = @days;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This code causes an error in case you don’t really want to count it but
+accidentally assign an array to a scalar. To be safe, use the <code>scalar()</code>
+function.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+my $count = scalar @days;
+print($count, "\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The operator <code>$#</code> returns the highest index of an array.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+my $last = $#days;
+print($last, "\n"); #" 6</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modifying_perl_array_elements"><a class="anchor" href="#_modifying_perl_array_elements"></a>3. Modifying Perl array elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To change the value of an element, you access the element using the index and
+assign it a new value. Perl also allows you to change the values of multiple
+elements at a time.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+
+$days[0] = 'Monday';
+
+@days[1..6] = qw(Tuesday Wednesday Thursday Friday Saturday Sunday);
+
+print("@days","\n");</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_perl_array_operations"><a class="anchor" href="#_perl_array_operations"></a>4. Perl array operations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Perl provides several useful functions and operators to help you manipulate
+arrays effectively. We will cover the most important ones in the following
+sections.</p>
+</div>
+<div class="paragraph">
+<div class="title">Perl array as a stack with push() and pop() functions</div>
+<p>Both functions treat an array as a stack. A stack works based on the last in
+first out (LIFO) philosophy. It works exactly the same as a stack of books. The
+<code>push()</code> function appends one or more elements to the end of the array, while
+the <code>pop()</code> function removes the last element from the end of the array.</p>
+</div>
+<div class="listingblock">
+<div class="title">How to use <code>push()</code> and <code>pop()</code> functions</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @stack = (); # empty array
+
+print("push 1 to array\n");
+
+push(@stack,1);
+
+print("push 2 to array\n");
+push(@stack,2);
+
+print("push 3 to array\n");
+push(@stack,3);
+
+print("@stack", "\n");
+
+my $elem = pop(@stack);
+print("element: $elem\n");
+
+$elem = pop(@stack);
+print("element: $elem\n");
+
+$elem = pop(@stack);
+print("element: $elem\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Perl array as a queue with <code>unshift()</code> and <code>pop()</code> functions</div>
+<p>If the <code>push()</code> and pop()` treat an array as a stack, the <code>unshift()</code> and
+<code>pop()</code> functions treat an array as a queue. A queue works based on the first
+in first out (FIFO) philosophy. It works like a queue of visitors. The
+<code>unshift()</code> function adds one or more elements to the front of the array, while
+the <code>pop()</code> function removes the last element of the array.</p>
+</div>
+<div class="listingblock">
+<div class="title">How to use <code>unshift()</code> and <code>pop()</code> functions</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @queue = (); # empty queue
+
+print("enqueue 1 to array\n");
+unshift(@queue,1);
+
+print("enqueue 2 to array\n");
+unshift(@queue,2);
+
+printf("enqueue 3 to array\n");
+unshift(@queue,3);
+
+print("@queue", "\n"); # 3 2 1
+
+my $elem = pop(@queue);
+print("element: $elem\n");
+
+$elem = pop(@queue);
+print("element: $elem\n");
+
+$elem = pop(@queue);
+print("element: $elem\n");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Sorting Perl arrays</div>
+<p>Perl provides the <code>sort()</code> function that allows you to sort an array in
+alphabetical or numerical order.</p>
+</div>
+<div class="listingblock">
+<div class="title">Sorting an array of strings alphabetically</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+
+my @fruits = qw(oranges apples mango cucumber);
+my @sorted = sort @fruits;
+
+print("@sorted","\n"); # apples cucumber mango oranges</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>sort()</code> function also accepts a block of code that allows you to change
+the sort algorithm. If you want to sort an array in numerical order, you need
+to change the default sorting algorithm.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-perl hljs" data-lang="perl">#!/usr/bin/perl
+use warnings;
+use strict;
+my @a = qw(3 2 1 4 7 6);
+print("unsorted: ", "@a", "\n"); # unsorted: 3 2 1 4 7 6
+@a = sort {$a &lt;=&gt; $b} @a;
+print("sorted:", "@a", "\n"); # sorted: 1 2 3 4 6 7</code></pre>
+</div>
+</div>
+<div class="ulist">
+<div class="title">In the example above:</div>
+<ul>
+<li>
+<p>First, we had an unsorted array <code>@a</code>, and we displayed the <code>@a</code> array to make
+sure that it is unsorted.</p>
+</li>
+<li>
+<p>Second, we used the <code>sort()</code> function to sort the <code>@a</code> array. We passed a
+block of code <code>{$a &lt;&#8658;$b}</code> and the <code>@a</code> array to the sort function. The <code>$a</code>
+and <code>$b</code> are global variables defined by the <code>sort()</code> function for sorting.
+The operator <code>&lt;&#8658;</code> is used to compare two numbers. The code block <code>{$a &lt;&#8658;
+$b}</code> returns -1 if <code>$a</code> &lt; <code>$b</code>, 0 if <code>$a</code> = <code>$b</code>, and 1 if <code>$a</code> &gt; <code>$b</code>.</p>
+</li>
+<li>
+<p>Third, we displayed the elements of the sorted array @a.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information on the <code>sort()</code> function, check out the
+<a href="syntax-22-sort.html" class="xref page">Perl sort function</a>.</p>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
